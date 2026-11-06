@@ -1,0 +1,112 @@
+:root {
+  --ink: #1d1c1a;
+  --paper: #fbf8f3;
+  --soft: #f0ede9;
+  --muted: #6f6a62;
+  --pink: #ffb8d9;
+  --mint: #a8edcf;
+  --sky: #b5e2f5;
+  --butter: #ffe48a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.6 "DM Sans", system-ui, sans-serif;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 16px 64px;
+}
+
+h1,
+h2 {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(36px, 8vw, 52px);
+  margin: 24px 0 12px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 40px 0 8px;
+}
+
+a {
+  color: var(--ink);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.lead {
+  font-size: 20px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.faces {
+  display: flex;
+  gap: 10px;
+}
+
+.faces img {
+  width: 56px;
+  height: 56px;
+}
+
+.steps {
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps li {
+  position: relative;
+  padding: 14px 16px 14px 60px;
+  margin: 10px 0;
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 16px;
+  counter-increment: step;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  background: var(--butter);
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+}
+
+.box {
+  padding: 16px;
+  background: var(--soft);
+  border-radius: 16px;
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 16px;
+  border-top: 2px solid var(--soft);
+  font-size: 15px;
+}
